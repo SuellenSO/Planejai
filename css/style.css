@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo - Centraliza verticalmente tudo em telas pequenas */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #EADCF3;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho geral */
+header {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Topo do cabeçalho (logo + menu) */
+  .topbar {
+    background: #8A56AC; /* Roxo médio */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  
+  /* Navegação */
+  .topbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .topbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .topbar nav ul li a:hover {
+    background: #5B2A86;
+    transform: scale(1.05);
+  }
+  
+  /* Hero abaixo do topo */
+  .hero {
+    background: #A2C9ED; /* Azul suave */
+    color: #fff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+  }
+  
+  /* Título grande */
+  .hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  /* Frase resumo */
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Responsividade do menu */
+  @media (max-width: 768px) {
+    .topbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .topbar nav ul {
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+    }
+    .topbar nav ul li {
+      width: 100%;
+    }
+    .topbar nav ul li a {
+      display: block;
+      width: 100%;
+    }
+  }
+  
+
+/* Navegação com Flexbox */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+nav ul li {
+  margin: 0.5rem 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+  background: #5B2A86;
+  transform: scale(1.05);
+}
+
+/* Conteúdo principal centralizado com Flexbox */
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Containers internos centralizados */
+main > section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+/* Títulos */
+h2 {
+  color: #5B2A86;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 50px;
+}
+
+p {
+  font-size: 20px;
+  padding: 10px 0px ;
+}
+/* Imagem */
+.image {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.image img {
+  max-height: 400px;
+  border-radius: 50px 0px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Inputs e Textareas */
+input, textarea {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  width: 100%;
+  border: 2px solid #A2C9ED;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #8A56AC;
+  box-shadow: 0 0 0 3px rgba(138,86,172,0.2);
+  outline: none;
+}
+
+/* Botões */
+button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #A2C9ED;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #8A56AC;
+  transform: translateY(-2px);
+}
+
+/* Lista de tarefas */
+ul#taskList {
+  list-style: none;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul#taskList li {
+  position: relative;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  background: #fff;
+  border-left: 5px solid #A2C9ED;
+  margin-top: 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: background 0.3s, transform 0.2s;
+  width: 100%;
+  max-width: 600px;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+ul#taskList li::before {
+  content: "✓";
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8A56AC;
+  font-weight: bold;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+ul#taskList li:hover {
+  background: #F7C4D9;
+  transform: scale(1.02);
+}
+
+/* Tarefas concluídas */
+ul#taskList li.completed {
+  text-decoration: line-through;
+  background: #d9f0e1;
+  border-left-color: #5B2A86;
+  color: #777;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #8A56AC;
+  color: #fff;
+}
+
+/* Animação fade in */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsividade extra */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+}
