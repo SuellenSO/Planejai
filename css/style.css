@@ -276,6 +276,9 @@ footer {
 
   /* Responsividade para celular */
   @media (max-width: 425px) {
+    body {
+      overflow-x: hideen;
+    }
     .topbar {
       min-width: 600px;
       flex-direction: column;
