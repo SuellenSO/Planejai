@@ -277,7 +277,7 @@ footer {
   /* Responsividade para celular */
   @media (max-width: 425px) {
     body {
-      overflow-x: hideen;
+      overflow-x: hidden;
     }
     .topbar {
       min-width: 600px;
